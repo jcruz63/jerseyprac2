@@ -33,7 +33,7 @@ public class LocalPersistence implements PersistenceUnitInfo {
             HikariDataSource dataSource = new HikariDataSource();
             dataSource.setJdbcUrl("jdbc:mysql://localhost/jersey");
             dataSource.setUsername("root");
-            dataSource.setPassword("Dc#p21075092385");
+            dataSource.setPassword("Dc#p21075");
             return dataSource;
     }
 
@@ -59,7 +59,7 @@ public class LocalPersistence implements PersistenceUnitInfo {
 
     @Override
     public List<String> getManagedClassNames() {
-        return List.of();
+        return List.of("com.turnbased.jerseyprac2.model.Category", "com.turnbased.jerseyprac2.model.Dataset");
     }
 
     @Override

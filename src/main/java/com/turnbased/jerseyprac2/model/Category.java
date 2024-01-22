@@ -9,8 +9,11 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
+    @Column(name = "short_description")
     private String shortDescription;
+    @Column(name = "long_description")
     private String longDescription;
+    @Column(name = "hex_color")
     private String hexColor;
     public Category() {
     }
@@ -61,5 +64,16 @@ public class Category {
 
     public void setHexColor(String hexColor) {
         this.hexColor = hexColor;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", longDescription='" + longDescription + '\'' +
+                ", hexColor='" + hexColor + '\'' +
+                '}';
     }
 }
