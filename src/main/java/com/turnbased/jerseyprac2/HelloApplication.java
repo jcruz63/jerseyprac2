@@ -2,6 +2,7 @@ package com.turnbased.jerseyprac2;
 
 import com.turnbased.jerseyprac2.model.Category;
 import com.turnbased.jerseyprac2.service.CategoryService;
+import jakarta.persistence.TypedQuery;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
@@ -48,9 +49,10 @@ public class HelloApplication extends Application {
 //            entityManager.close();
 //        }
 
-        CategoryService categoryService = new CategoryService();
-        Category category = categoryService.getCategoryById(1);
-        logger.info(category.toString());
+//        CategoryService categoryService = new CategoryService();
+//        Category category = categoryService.getCategoryById(1);
+//        logger.info(category.toString());
+
 
     }
 }
