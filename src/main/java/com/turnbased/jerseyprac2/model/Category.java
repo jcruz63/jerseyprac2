@@ -18,8 +18,7 @@ public class Category {
     public Category() {
     }
 
-    public Category(long id, String title, String shortDescription, String longDescription, String hexColor) {
-        this.id = id;
+    public Category(String title, String shortDescription, String longDescription, String hexColor) {
         this.title = title;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;

@@ -3,6 +3,7 @@ package com.turnbased.jerseyprac2.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "join_value")
 public class JoinValue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

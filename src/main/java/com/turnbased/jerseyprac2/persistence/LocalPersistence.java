@@ -32,8 +32,8 @@ public class LocalPersistence implements PersistenceUnitInfo {
     public DataSource getJtaDataSource() {
             HikariDataSource dataSource = new HikariDataSource();
             dataSource.setJdbcUrl("jdbc:mysql://localhost/jersey");
-            dataSource.setUsername("root");
-            dataSource.setPassword("Dc#p21075");
+            dataSource.setUsername(System.getenv("dbUsername"));
+            dataSource.setPassword(System.getenv("dbpassword"));
             return dataSource;
     }
 
@@ -59,7 +59,8 @@ public class LocalPersistence implements PersistenceUnitInfo {
 
     @Override
     public List<String> getManagedClassNames() {
-        return List.of("com.turnbased.jerseyprac2.model.Category", "com.turnbased.jerseyprac2.model.Dataset");
+        return List.of("com.turnbased.jerseyprac2.model.Category",
+                "com.turnbased.jerseyprac2.model.Dataset", "com.turnbased.jerseyprac2.model.JoinKey", "com.turnbased.jerseyprac2.model.JoinValue");
     }
 
     @Override
